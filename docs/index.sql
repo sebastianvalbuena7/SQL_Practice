@@ -10,3 +10,12 @@ CREATE INDEX "country_continent" on country (
 
 
 SELECT * FROM country where continent = 'Asia';
+
+-- Create unique index
+CREATE unique index "unique_name_countrycode_district" on city(
+    name, countrycode, district
+);
+
+CREATE INDEX "city_district" on city(
+    district
+);
